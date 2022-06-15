@@ -64,8 +64,8 @@ class MainActivity : AppCompatActivity() {
                 val skipped=layoutManager.findFirstVisibleItemPosition()
                 val totalitem=layoutManager.itemCount
                 if (iscrolled && vitem+skipped==totalitem) {
-                    viewmodel.getData(this@MainActivity, pageno.toString(), "10")
-                    pageno++
+                 pageno++  
+                 viewmodel.getData(this@MainActivity, pageno.toString(), "10")             
                     Log.d(TAG, "onScrolled: "+pageno.toString())
                     iscrolled=false
                 }
